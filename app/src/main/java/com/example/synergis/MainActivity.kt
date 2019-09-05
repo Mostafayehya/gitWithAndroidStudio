@@ -16,6 +16,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
 
         }
+        button2.setOnClickListener {
+
+            Toast.makeText(this, "button 222222 clicked", Toast.LENGTH_SHORT).show()
+
+        }
+
+
     }
 
 
