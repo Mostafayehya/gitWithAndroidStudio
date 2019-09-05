@@ -1,38 +1,22 @@
 package com.example.synergis
 
-import android.annotation.SuppressLint
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.KeyEvent
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var myWebView: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-         myWebView = WebView(this)
-        setContentView(myWebView)
-        myWebView.loadUrl("https://wodemo.mysynergis.com/WebOffice106R2/synserver?&user=weboffice&password=qwe")
-        myWebView.settings.javaScriptEnabled = true
-        myWebView.webViewClient = WebViewClient()
+        setContentView(R.layout.activity_main)
 
+        button.setOnClickListener {
+            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
 
-
-
-    }
-
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        // Check if the key event was the Back button and if there's history
-        if (keyCode == KeyEvent.KEYCODE_BACK && myWebView.canGoBack()) {
-            myWebView.goBack()
-            return true
         }
-        // If it wasn't the Back key or there's no web page history, bubble up to the default
-        // system behavior (probably exit the activity)
-        return super.onKeyDown(keyCode, event)
     }
+
 
 }
