@@ -1,4 +1,4 @@
-package com.example.synergis
+package com.example.WebOffice
 
 import org.junit.Test
 

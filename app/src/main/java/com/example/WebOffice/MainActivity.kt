@@ -1,8 +1,7 @@
-package com.example.synergis
+package com.example.WebOffice
 
-import android.annotation.SuppressLint
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.KeyEvent
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -13,14 +12,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-         myWebView = WebView(this)
+
+        myWebView = WebView(this)
         setContentView(myWebView)
-        myWebView.loadUrl("https://wodemo.mysynergis.com/WebOffice106R2/synserver?&user=weboffice&password=qwe")
+
+        myWebView.loadUrl("http://www.liedman.net/leaflet-routing-machine/")
+
         myWebView.settings.javaScriptEnabled = true
+
         myWebView.webViewClient = WebViewClient()
-
-
-
 
     }
 
